@@ -19,6 +19,15 @@
 <!-- body -->
 
 <body>
+  <style>
+    .nav-pill .nav-link {
+      color: grey;
+    }
+
+    .nav-pill .nav-link.active {
+      color: blue;
+    }
+  </style>
   <nav class="navbar navbar-light bg-light border-bottom">
     <div class="container">
 
@@ -32,78 +41,169 @@
       <!-- Example single danger button -->
 
       <div class="d-flex align-items-center gap-2">
-        <div class="dropdown">
-        <button type="button" class="btn btn-success">Create New Post</button>
+        <div class="d-flex align right justify-content-end">
+          <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+            data-bs-target="#ejemplomodal">Create New Post</button>
         </div>
 
         <div class="dropdown">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-gear"></i>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Accesibility</a></li>
-          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
-        </ul>
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+          </ul>
         </div>
       </div>
 
     </div>
   </nav>
-<!-- nav tab para sleccionar grid o feed -->
-<div class="container py-3">
-  <!-- tabs -->
- <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid">
-      <i class="fa-solid fa-table-cells"></i>
-    </button>
-  </li>
-  <li class="nav-item">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#feed">
-      <i class="fa-solid fa-square"></i>
-    </button>
-  </li>
-</ul> 
-</div>
 
-<!-- tab-content -->
+    <!-- nav tab para sleccionar grid o feed -->
+  <div class="container-fluid p-3">
+    <!-- tabs -->
+    <ul class="nav nav-pill justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid">
+          <i class="fa-solid fa-table-cells"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#feed">
+          <i class="fa-solid fa-square"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- tab-content -->
   <div class="tab-content">
 
     <!-- Vista Grid -->
-    <div class="tab-pane fade show active" id="grid">
+    <div class="tab-pane fade show active overflow-hidden" id="grid" role="tabpanel" aria-labelledby="home-tab">
       <div class="row">
-        <div class="col-4"><img src="https://picsum.photos/400" class="img-fluid"></div>
-        <div class="col-4"><img src="https://picsum.photos/401" class="img-fluid"></div>
-        <div class="col-4"><img src="https://picsum.photos/402" class="img-fluid"></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://png.pngtree.com/png-clipart/20250122/original/pngtree-curious-dog-looking-at-the-camera-png-image_19333108.png"
+            class="img-fluid w-100" alt=""></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://img.freepik.com/fotos-premium/cuatro-personas-mirando-camara_13339-282506.jpg"
+            class="img-fluid w-100" alt=""></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://www.vercroacia.com/dubrovnik/fotos/murallas-dubrovnik.jpg" class="img-fluid w-100" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://st.depositphotos.com/2325841/2530/i/450/depositphotos_25309161-stock-photo-african-woman-laughing.jpg"
+            class="img-fluid w-100" alt=""></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://cdn-imgix.headout.com/media/images/c90f7eb7a5825e6f5e57a5a62d05399c-25058-BestofParis-EiffelTower-Cruise-Louvre-002.jpg?auto=format&q=90&crop=faces&fit=crop"
+            class="img-fluid w-100" alt=""></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://imagenes.elpais.com/resizer/v2/YQV2RW2Y25M2NG46KXQQCGTRD4.jpg?auth=dd74a3bdd0f14b8247d525e4e96c88d62aee33c7a24f9625f8af6ff346c34a16&width=1200"
+            class="img-fluid w-100" alt=""></div>
+      </div>
+      <div class="row">
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://as2.ftcdn.net/jpg/00/14/37/37/1000_F_14373760_6EU3NRJ0PdC5vALSPRhrJhKIJHjY7hG3.jpg"
+            class="img-fluid w-100" alt=""></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://s44783.pcdn.co/wp-content/uploads/sites/6/2024/09/computer-program-coding-screen-1024x767.jpg.optimal.jpg"
+            class="img-fluid w-100" alt=""></div>
+        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+            src="https://media.istockphoto.com/id/1889755895/es/foto/grupo-de-diversas-estudiantes-universitarias-riendo-en-una-clase-en-la-escuela.jpg?s=612x612&w=0&k=20&c=bUBrHluTPdqkLxtFZDa8EkZhlMo-qT3mBRtyxh8oMEk="
+            class="img-fluid w-100" alt=""></div>
       </div>
     </div>
 
     <!-- Vista Feed -->
     <div class="tab-pane fade" id="feed">
-      <div class="card mx-auto" style="width: 500px;">
-        <div class="card-body">
-          <h5 class="card-title">My Crazy Dog Spark!</h5>
+      <div class="d-flex flex-column align-items-center">
+        <!-- post 1 -->
+        <div class="card mb-4" style="width: 500px;">
+          <div class="card-body d-flex justify-content-between">
+            <h5 class="card-title">My Crazy Dog Spark!</h5>
+            <p>08/26</p>
+          </div>
+          <img
+            src="https://png.pngtree.com/png-clipart/20250122/original/pngtree-curious-dog-looking-at-the-camera-png-image_19333108.png"
+            class="img-fluid">
+          <div class="card-body">
+            <strong>204 Likes</strong>
+            <p>This is an example of a very good photo.</p>
+          </div>
         </div>
-        <img src="https://picsum.photos/600" class="img-fluid">
-        <div class="card-body">
-          <strong>204 Likes</strong>
-          <p>This is an example of a very good photo.</p>
+
+        <!-- post2 -->
+        <div class="card mb-4" style="width: 500px;">
+          <div class="card-body d-flex justify-content-between">
+            <h5 class="card-title">Tjhe greatness of Coatia</h5>
+            <p>04/09</p>
+          </div>
+          <img src="https://www.vercroacia.com/dubrovnik/fotos/murallas-dubrovnik.jpg"
+            class="img-fluid">
+          <div class="card-body">
+            <strong>26985 Likes</strong>
+            <p>This is an example of a very good photo.</p>
+          </div>
+        </div>
+
+        <!-- post 3 -->
+        <div class="card mb-4" style="width: 500px;">
+          <div class="card-body d-flex justify-content-between">
+            <h5 class="card-title">Amazing GOAL by Cristiano!</h5>
+            <p>06/10</p>
+          </div>
+          <img src="https://imagenes.elpais.com/resizer/v2/YQV2RW2Y25M2NG46KXQQCGTRD4.jpg?auth=dd74a3bdd0f14b8247d525e4e96c88d62aee33c7a24f9625f8af6ff346c34a16&width=1200" class="img-fluid">
+          <div class="card-body">
+            <strong>204 Likes</strong>
+            <p>This is an example of a very good photo.</p>
+          </div>
         </div>
       </div>
     </div>
 
   </div>
 
+<!-- modal -->
+  <div class="modal fade" id="ejemplomodal" tabindex="-1" aria-labelledby="ejemplomodalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ejemplomodalLabel">Create New post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Caption</h6>
+          <textarea class="form-control" placeholder="Add the caption of your post here"
+            id="floatingTextarea2"></textarea>
+          <div class="row p-2">
+            <button class="col-1 border rounded p-1 m-1 btn-light">
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <button class="col-1 border rounded p-1 m-1 btn-light">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-
-</div>
+  </div>
 
   <!-- JavaScript opcional -->
 
