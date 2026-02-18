@@ -1,37 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Etiquetas meta requeridas -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<head>
+  <!-- Etiquetas meta requeridas -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 
-    <title>Hello, world!</title>
-  </head>
-  <!-- body -->
-  <body>
-    <!-- grid -->
+  <title>Instagram Feed</title>
+</head>
+
+<!-- body -->
+
+<body>
+  <nav class="navbar navbar-light bg-light border-bottom">
     <div class="container">
-  <div class="row">
-    <div class="col-12">
-      Column
+
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <i class="fa-brands fa-instagram me-2 fs-4"></i>
+        Instagram
+      </a>
+
+      <!-- Botones derecha -->
+      <!-- Example single danger button -->
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="dropdown">
+        <button type="button" class="btn btn-success">Create New Post</button>
+        </div>
+
+        <div class="dropdown">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+        </ul>
+        </div>
+      </div>
+
     </div>
-  <div class="row">
-    <div class="col-12">
-      Column
-    </div>  
-    
-  </div>
+  </nav>
+<!-- nav tab para sleccionar grid o feed -->
+<div class="container py-3">
+  <!-- tabs -->
+ <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid">
+      <i class="fa-solid fa-table-cells"></i>
+    </button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#feed">
+      <i class="fa-solid fa-square"></i>
+    </button>
+  </li>
+</ul> 
 </div>
 
-    <!-- JavaScript opcional -->
-    <!-- Popper.js, luego Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<!-- tab-content -->
+  <div class="tab-content">
 
-  </body>
+    <!-- Vista Grid -->
+    <div class="tab-pane fade show active" id="grid">
+      <div class="row">
+        <div class="col-4"><img src="https://picsum.photos/400" class="img-fluid"></div>
+        <div class="col-4"><img src="https://picsum.photos/401" class="img-fluid"></div>
+        <div class="col-4"><img src="https://picsum.photos/402" class="img-fluid"></div>
+      </div>
+    </div>
+
+    <!-- Vista Feed -->
+    <div class="tab-pane fade" id="feed">
+      <div class="card mx-auto" style="width: 500px;">
+        <div class="card-body">
+          <h5 class="card-title">My Crazy Dog Spark!</h5>
+        </div>
+        <img src="https://picsum.photos/600" class="img-fluid">
+        <div class="card-body">
+          <strong>204 Likes</strong>
+          <p>This is an example of a very good photo.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+</div>
+
+  <!-- JavaScript opcional -->
+
+  <!-- Popper.js, luego Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
-
